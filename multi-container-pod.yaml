@@ -3,15 +3,13 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    run: nginx-pod
-  name: nginx-pod
+    run: multi-container-pod
+  name: multi-container-pod
 spec:
   containers:
   - image: nginx:latest
     name: nginx-pod
   - name: busybox-pod
-    image: busybox
-    resources: {}
-  dnsPolicy: ClusterFirst
-  restartPolicy: Always
-status: {}
+    image: busybox:latest
+    command: ['sh', '-c', 'while true; do date; sleep 10; done']
+    
