@@ -1,7 +1,0 @@
-Kind: Cluster
-apiVersion: kind.k8s.gcr.io/v1alpha4
-nodes:
-  - role: control-plane
-  - role: worker
-  - role: worker
-  - role: worker
